@@ -9,6 +9,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatRadioModule } from '@angular/material/radio';
 
 import { AppComponent } from './app.component';
 import { DialogDemoComponent } from './dialog-demo/dialog-demo.component';
@@ -24,6 +25,7 @@ import { DialogDemoComponent } from './dialog-demo/dialog-demo.component';
     MatExpansionModule,
     MatToolbarModule,
     MatStepperModule,
+    MatRadioModule
   ],
   declarations: [AppComponent, DialogDemoComponent],
   entryComponents: [DialogDemoComponent],

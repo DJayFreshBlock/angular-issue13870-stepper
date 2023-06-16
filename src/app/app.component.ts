@@ -11,9 +11,22 @@ import { DialogDemoComponent } from './dialog-demo/dialog-demo.component';
 export class AppComponent {
   name = 'Angular';
 
+  useWorkaround: boolean = false;
+  refreshing: boolean = false;
+
   constructor(private dialog: MatDialog) {}
 
   openDialog() {
-    this.dialog.open(DialogDemoComponent, { width: '500px' });
+    const componentRef = this.dialog.open(DialogDemoComponent, {
+      width: '500px',
+    });
+    componentRef.componentInstance.useWorkaround = this.useWorkaround;
+  }
+
+  change() {
+    this.refreshing = true;
+    setTimeout(() => {
+      this.refreshing = false;
+    }, 10);
   }
 }

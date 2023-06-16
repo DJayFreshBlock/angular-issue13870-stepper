@@ -4,6 +4,20 @@ p {
 
 .dialog-button {
   color: white;
-  background-color: #297FCA;
+  background-color: #297fca;
   margin-top: 15px;
+}
+
+mat-radio-group {
+  display: block;
+}
+mat-radio-button {
+  display: block;
+}
+
+.mgn.b1 {
+  margin-bottom: 1rem;
+}
+.mgn.l1 {
+  margin-left: 1rem;
 }

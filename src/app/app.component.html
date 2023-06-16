@@ -1,5 +1,5 @@
 <mat-toolbar color="primary">
-  <span>Dialog &lt;-&gt; Expansion Panel Demo</span>
+  <span>Mat Stepper &amp; Mat Dialog &lt;-&gt; Expansion Panel Demo</span>
 </mat-toolbar>
 
 <p>
@@ -8,9 +8,18 @@
   After a quick blip, all the panels collapse.
 </p>
 
-<p>** FIXED WITH WORKAROUND **</p>
+<mat-radio-group [(ngModel)]="useWorkaround">
+  <mat-radio-button class="mgn b1" [value]="true">Workaround</mat-radio-button>
+  <mat-radio-button [value]="false">No Workaround</mat-radio-button>
+</mat-radio-group>
+
 <button mat-raised-button class="dialog-button" (click)="openDialog()">
-  Click me!
+  Open Dialog
+</button>
+<button mat-raised-button class="dialog-button mgn l1" (click)="change()">
+  Refresh
 </button>
 
-<app-dialog-demo></app-dialog-demo>
+<ng-container *ngIf="!refreshing">
+  <app-dialog-demo [useWorkaround]="useWorkaround"></app-dialog-demo>
+</ng-container>

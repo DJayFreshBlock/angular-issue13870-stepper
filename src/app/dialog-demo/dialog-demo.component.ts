@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-dialog-demo',
@@ -6,14 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dialog-demo.component.css'],
 })
 export class DialogDemoComponent implements OnInit {
+  @Input() useWorkaround: boolean;
+
+  disableAnimation: boolean;
+
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.disableAnimation = this.useWorkaround;
+  }
 
   // Workaround for angular component issue #13870
-  disableAnimation = true;
   ngAfterViewInit(): void {
     // timeout required to avoid the dreaded 'ExpressionChangedAfterItHasBeenCheckedError'
-    // setTimeout(() => this.disableAnimation = false);
+    setTimeout(() => (this.disableAnimation = false));
   }
 }
