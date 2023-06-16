@@ -22,9 +22,22 @@
 
 <ng-container *ngIf="!refreshing">
   <app-dialog-demo [useWorkaround]="useWorkaround"></app-dialog-demo>
+  <mat-stepper>
+    <mat-step>
+      <mat-expansion-panel [expanded]="false">
+        <mat-expansion-panel-header>
+          Accordion - No Workaround
+        </mat-expansion-panel-header>
+        Some content. Some content. Some content. Some content. Some content.
+        Some content. Some content. Some content.
+      </mat-expansion-panel>
+    </mat-step>
+  </mat-stepper>
 
   <mat-expansion-panel [expanded]="false">
-    <mat-expansion-panel-header> Not Nested Top Level </mat-expansion-panel-header>
+    <mat-expansion-panel-header>
+      Not Nested Top Level
+    </mat-expansion-panel-header>
     Some content. Some content. Some content. Some content. Some content. Some
     content. Some content. Some content.
   </mat-expansion-panel>
