@@ -22,4 +22,10 @@
 
 <ng-container *ngIf="!refreshing">
   <app-dialog-demo [useWorkaround]="useWorkaround"></app-dialog-demo>
+
+  <mat-expansion-panel [expanded]="false">
+    <mat-expansion-panel-header> Not Nested Top Level </mat-expansion-panel-header>
+    Some content. Some content. Some content. Some content. Some content. Some
+    content. Some content. Some content.
+  </mat-expansion-panel>
 </ng-container>
