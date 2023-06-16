@@ -1,0 +1,9 @@
+p {
+  font-family: Lato;
+}
+
+.dialog-button {
+  color: white;
+  background-color: #297FCA;
+  margin-top: 15px;
+}

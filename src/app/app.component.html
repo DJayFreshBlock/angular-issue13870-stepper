@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+  <span>Dialog &lt;-&gt; Expansion Panel Demo</span>
+</mat-toolbar>
+
+<p>
+  When you click the button below, note the FOUC -- the expansion panels are all
+  temporarily expanded, even though the "expanded" attribute is set to false.
+  After a quick blip, all the panels collapse.
+</p>
+
+<p>** FIXED WITH WORKAROUND **</p>
+<button mat-raised-button class="dialog-button" (click)="openDialog()">
+  Click me!
+</button>
+
+<app-dialog-demo></app-dialog-demo>
